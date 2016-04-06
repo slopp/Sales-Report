@@ -11,7 +11,8 @@ output:
 date: '`r Sys.Date()`'
 params:
   Owner: Sean Lopp
-  pwd: stop("Need password")
+  SFusername: stop("Need username")
+  SFpassword: stop("Need password")
 ---
 
 
