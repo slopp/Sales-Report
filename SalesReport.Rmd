@@ -48,8 +48,8 @@ library(forecast)
 #source("promptSFCredentials.R")
 #sf <- promptSFCredentials() 
 #if(!exists("sf")) stop("Need Salesforce context named 'sf'")
-sf<-rforcecom.login("sean@rstudio.com",
-                    paste(params$pwd,"FXnvB1VTBeUNDK4b02C2KlZR9"
+sf<-rforcecom.login(params$SFusername,
+                    paste(params$SFpassword,"FXnvB1VTBeUNDK4b02C2KlZR9"
 ,sep=""),
 "na9.salesforce.com", "26.0")
 ```
