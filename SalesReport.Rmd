@@ -13,6 +13,7 @@ params:
   Owner: Sean Lopp
   SFusername: stop("Need username")
   SFpassword: stop("Need password")
+  SFtoken: stop("Need SF security token - https://na9.salesforce.com/_ui/system/security/ResetApiTokenEdit?retURL=%2Fui%2Fsetup%2FSetup%3Fsetupid%3DPersonalInfo&setupid=ResetApiToken")
 ---
 
 
@@ -49,8 +50,8 @@ library(forecast)
 #sf <- promptSFCredentials() 
 #if(!exists("sf")) stop("Need Salesforce context named 'sf'")
 sf<-rforcecom.login(params$SFusername,
-                    paste(params$SFpassword,"FXnvB1VTBeUNDK4b02C2KlZR9"
-,sep=""),
+                    paste(params$SFpassword,params$SFtoken,sep=""),
+
 "na9.salesforce.com", "26.0")
 ```
 
