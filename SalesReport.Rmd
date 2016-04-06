@@ -46,9 +46,7 @@ library(forecast)
 
 ```{r Get SalesForce Connection, message=FALSE, include=FALSE}
 
-#source("promptSFCredentials.R")
-#sf <- promptSFCredentials() 
-#if(!exists("sf")) stop("Need Salesforce context named 'sf'")
+
 sf<-rforcecom.login(params$SFusername,
                     paste(params$SFpassword,params$SFtoken,sep=""),
 
