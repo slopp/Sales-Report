@@ -11,6 +11,7 @@ output:
 date: '`r Sys.Date()`'
 params:
   Owner: Sean Lopp
+  pwd: stop("Need password")
 ---
 
 
@@ -47,7 +48,7 @@ library(forecast)
 #sf <- promptSFCredentials() 
 #if(!exists("sf")) stop("Need Salesforce context named 'sf'")
 sf<-rforcecom.login("sean@rstudio.com",
-                    paste("asd3asd##","FXnvB1VTBeUNDK4b02C2KlZR9"
+                    paste(params$pwd,"FXnvB1VTBeUNDK4b02C2KlZR9"
 ,sep=""),
 "na9.salesforce.com", "26.0")
 ```
